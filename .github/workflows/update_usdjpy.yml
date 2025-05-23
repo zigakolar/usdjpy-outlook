@@ -1,5 +1,4 @@
-- name: Fetch USDJPY direction
-  run: python3 fetch_usdjpy.py
+name: Update USDJPY Outlook
 
 on:
   schedule:
@@ -23,7 +22,7 @@ jobs:
         run: pip install openai
 
       - name: Fetch USDJPY direction
-        run: ./fetch_usdjpy.py
+        run: python3 fetch_usdjpy.py
 
       - name: Commit & push usdjpy.json
         run: |
@@ -34,4 +33,3 @@ jobs:
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
