@@ -12,7 +12,7 @@ PROMPT = "Provide today’s USD/JPY market direction only: long, short, or neutr
 
 # 2) v1.x SDK call
 resp = openai.chat.completions.create(
-    model="gpt-4-turbo",
+    model="gpt-3.5-turbo",
     messages=[
         {"role": "system", "content": ""},
         {"role": "user",   "content": PROMPT}
