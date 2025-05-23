@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import os, json
 import openai
-from openai.error import OpenAIError
 
 # 1) Load API key
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -10,7 +9,7 @@ if not openai.api_key:
 
 PROMPT = "Provide today’s USD/JPY market direction only: long, short, or neutral."
 
-# 2) Attempt the API call with fallback
+# 2) Try the API call; on any error, default to Neutral
 try:
     resp = openai.chat.completions.create(
         model="gpt-3.5-turbo",
@@ -21,20 +20,17 @@ try:
         temperature=0
     )
     direction = resp.choices[0].message.content.strip().title()
-except OpenAIError as e:
-    # Rate limits, network errors, etc.
-    print(f"OpenAI API error: {e!r}")
+except Exception as e:
+    print(f"API call failed, defaulting to Neutral: {e}")
     direction = "Neutral"
 
-# 3) Build payload
+# 3) Build and write JSON
 payload = {
     "direction":     direction,
     "stop_loss":     0,
     "take_profit_1": 0,
     "take_profit_2": 0
 }
-
-# 4) Always write the JSON
 with open("usdjpy.json", "w") as f:
     json.dump(payload, f, indent=2)
 
