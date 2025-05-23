@@ -1,4 +1,5 @@
-name: Update USDJPY Outlook
+- name: Fetch USDJPY direction
+  run: python3 fetch_usdjpy.py
 
 on:
   schedule:
