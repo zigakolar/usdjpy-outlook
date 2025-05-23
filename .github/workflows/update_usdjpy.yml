@@ -23,7 +23,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install openai yfinance pandas_ta
+        run: pip install openai
 
       - name: Fetch USDJPY direction
         env:
