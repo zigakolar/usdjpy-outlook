@@ -2,13 +2,16 @@ name: Update USDJPY Outlook
 
 on:
   schedule:
-    # Every day at 08:00 Europe/Ljubljana (UTC+2) → 06:00 UTC
     - cron: '0 6 * * *'
   workflow_dispatch:
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    # You can also set env here at the job level:
+    # env:
+    #   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -22,6 +25,9 @@ jobs:
         run: pip install openai
 
       - name: Fetch USDJPY direction
+        # inject the secret into this step:
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python3 fetch_usdjpy.py
 
       - name: Commit & push usdjpy.json
