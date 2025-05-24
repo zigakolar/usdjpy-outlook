@@ -1,8 +1,9 @@
 {
-  "direction": "neutral",
+  "direction": "Neutral",
   "stop_loss": 0,
   "take_profit_1": 0,
-  "take_profit_2": 0
+  "take_profit_2": 0,
+  "high_volatility_report": null,
+  "next_window": "",
+  "summary": ""
 }
-
-
