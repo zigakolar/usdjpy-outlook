@@ -1,5 +1,5 @@
 permissions:
-  contents: write   # grant write access so the action can commit & push
+  contents: write   # allow the action to commit & push
 
 name: Update USDJPY Outlook
 
