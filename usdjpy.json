@@ -1,9 +1,9 @@
 {
   "direction": "Neutral",
   "stop_loss": 138.5,
-  "take_profit_1": 139.0,
-  "take_profit_2": 139.5,
+  "take_profit_1": 139.2,
+  "take_profit_2": 140.0,
   "high_volatility_report": null,
-  "next_window": "Watch for a break of 138.50 or 139.00 for directional cues.",
-  "summary": "Today's USD/JPY outlook is neutral as technical indicators show a consolidation pattern around key support and resistance levels. The ATR indicates low volatility, and there are no high-volatility economic reports due today. Fundamentally, differences in Fed and BoJ policies are not providing clear directional cues. Investors should watch for a break of current support or resistance levels to confirm the next move."
+  "next_window": "Watch for a break above 139.00 for a potential move higher or a drop below 138.00 for further downside.",
+  "summary": "Today's USD/JPY outlook is neutral as conflicting signals emerge from technical and fundamental analysis. Technically, the pair is trading within a tight range with no clear breakout pattern. Fundamentally, differences in Fed and BoJ policies are causing uncertainty, with no major economic reports due today to provide direction. Investors should watch key levels for potential breakouts."
 }
