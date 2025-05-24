@@ -1,9 +1,9 @@
 {
   "direction": "Neutral",
-  "stop_loss": 0,
-  "take_profit_1": 0,
-  "take_profit_2": 0,
+  "stop_loss": 138.5,
+  "take_profit_1": 139.0,
+  "take_profit_2": 139.5,
   "high_volatility_report": null,
-  "next_window": "",
-  "summary": ""
+  "next_window": "Watch for a break of 138.50 or 139.00 for directional cues.",
+  "summary": "Today's USD/JPY outlook is neutral as technical indicators show a consolidation pattern around key support and resistance levels. The ATR indicates low volatility, and there are no high-volatility economic reports due today. Fundamentally, differences in Fed and BoJ policies are not providing clear directional cues. Investors should watch for a break of current support or resistance levels to confirm the next move."
 }
