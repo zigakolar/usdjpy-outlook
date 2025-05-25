@@ -1,9 +1,9 @@
 {
-  "direction": "Neutral",
+  "direction": "Long",
   "stop_loss": 142.2921,
   "take_profit_1": 142.6789,
   "take_profit_2": 142.8079,
   "high_volatility_report": "None",
-  "next_window": "",
-  "summary": ""
+  "next_window": "Pivot R2 at 142.5500 is a key level for the next 4-8 hours.",
+  "summary": "Considering the DXY bias, the USD/JPY is biased long as the DXY is showing strength, with a potential target at Pivot R1 and Pivot R2 levels."
 }
