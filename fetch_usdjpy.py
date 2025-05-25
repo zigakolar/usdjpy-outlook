@@ -52,12 +52,22 @@ tr3 = (low - prior_close).abs()
 tr = pd.concat([tr1, tr2, tr3], axis=1).max(axis=1)
 df['ATR14'] = tr.rolling(window=14).mean()
 
-# Pivot, S1, R1
-df['pivot'] = (high + low + close) / 3
-df['S1'] = 2 * df['pivot'] - high
-df['R1'] = 2 * df['pivot'] - low
+# Compute pivot, S1, and R1 series without assigning to DataFrame
+pivot_series = (high + low + close) / 3
+s1_series = 2 * pivot_series - high
+r1_series = 2 * pivot_series - low
 
 # Extract latest bar as scalars
+last = df.dropna().iloc[-1]
+O = last['Open']
+H = last['High']
+L = last['Low']
+C = last['Close']
+atr = last['ATR14']
+# Extract corresponding pivot, S1, and R1 for the latest bar
+latest_idx = last.name
+s1 = s1_series.loc[latest_idx]
+r1 = r1_series.loc[latest_idx]
 last = df.dropna().iloc[-1]
 O = last['Open']
 H = last['High']
