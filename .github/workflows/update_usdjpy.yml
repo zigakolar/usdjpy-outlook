@@ -2,22 +2,21 @@ name: Update USDJPY Intraday Outlook
 
 on:
   schedule:
-    # Run hourly between 05:00 and 16:00 UTC (covers trading hours)
+    # Run hourly between 05:00 and 16:00 UTC
     - cron: '0 5-16 * * *'
   workflow_dispatch:
 
 permissions:
-  contents: write  # Allow committing back to the repo
+  contents: write
 
 jobs:
   publish:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          persist-credentials: true  # allow pushing with GITHUB_TOKEN
+          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -27,11 +26,12 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip setuptools wheel
-          pip install openai yfinance pandas
+          pip install openai yfinance pandas requests
 
       - name: Fetch USDJPY direction
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}   # Add your FMP key as a GitHub secret
         run: python3 fetch_usdjpy.py
 
       - name: Debug JSON
@@ -42,5 +42,5 @@ jobs:
         with:
           author_name: github-actions[bot]
           author_email: github-actions[bot]@users.noreply.github.com
-          message: "Hourly update of USDJPY outlook"
+          message: "Hourly update of USDJPY outlook with economic calendar"
           add: "usdjpy.json"
