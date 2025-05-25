@@ -3,7 +3,7 @@
   "stop_loss": 142.2921,
   "take_profit_1": 142.6789,
   "take_profit_2": 142.8079,
-  "high_volatility_report": null,
+  "high_volatility_report": "None",
   "next_window": "Monitor for breakout from the narrow range for directional bias.",
-  "summary": "With no change in the USD/JPY price and no high-volatility events reported, maintaining a neutral stance is advisable until a clearer trend emerges."
+  "summary": "With no high-volatility events and all data points identical, indicating no movement, the recommendation is to maintain a neutral position until a clearer trend emerges."
 }
