@@ -17,7 +17,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          persist-credentials: true
+          persist-credentials: true  # allow pushing with GITHUB_TOKEN
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -26,7 +26,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade pip setuptools wheel
           pip install openai yfinance pandas_ta
 
       - name: Fetch USDJPY direction
