@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+\#!/usr/bin/env python3
 import os
 import json
 import openai
@@ -12,8 +12,8 @@ from datetime import datetime
 openai.api\_key = os.getenv("OPENAI\_API\_KEY")
 if not openai.api\_key:
 raise RuntimeError("OPENAI\_API\_KEY not set")
-FMP\_API\_KEY = os.getenv("FMP\_API\_KEY")
-if not FMP\_API\_KEY:
+fmp\_api\_key = os.getenv("FMP\_API\_KEY")
+if not fmp\_api\_key:
 raise RuntimeError("FMP\_API\_KEY not set")
 
 # 2) Fetch today’s USD economic calendar events from FMP
@@ -21,7 +21,7 @@ raise RuntimeError("FMP\_API\_KEY not set")
 today = datetime.utcnow().date().isoformat()
 url = (
 f"[https://financialmodelingprep.com/stable/economic-calendar](https://financialmodelingprep.com/stable/economic-calendar)"
-f"?from={today}\&to={today}\&apikey={FMP\_API\_KEY}"
+f"?from={today}\&to={today}\&apikey={fmp\_api\_key}"
 )
 response = requests.get(url, timeout=10)
 if response.status\_code != 200:
@@ -132,8 +132,9 @@ data = {
 "summary": ""
 }
 
-# 8) Write JSON
+# 8) Write JSON to file
 
 with open("usdjpy.json", "w") as f:
 json.dump(data, f, indent=2)
+
 print("Wrote usdjpy.json:", data)
