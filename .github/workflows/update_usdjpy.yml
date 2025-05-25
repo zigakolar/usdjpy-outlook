@@ -2,8 +2,8 @@ name: Update USDJPY Outlook
 
 on:
   schedule:
-    # Every day at 08:00 Europe/Ljubljana (UTC+2) → 06:00 UTC
-    - cron: '0 6 * * *'
+    # Run hourly between 05:00 and 16:00 UTC (covers trading hours)
+    - cron: '0 5-16 * * *'
   workflow_dispatch:
 
 permissions:
