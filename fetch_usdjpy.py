@@ -64,18 +64,11 @@ H = last['High']
 L = last['Low']
 C = last['Close']
 atr = last['ATR14']
-# Extract corresponding pivot, S1, and R1 for the latest bar
+
+# Align pivot levels with the same timestamp
 latest_idx = last.name
 s1 = s1_series.loc[latest_idx]
 r1 = r1_series.loc[latest_idx]
-last = df.dropna().iloc[-1]
-O = last['Open']
-H = last['High']
-L = last['Low']
-C = last['Close']
-atr = last['ATR14']
-s1 = last['S1']
-r1 = last['R1']
 
 # Calculate SL/TP levels based on ATR + pivots
 stop_loss = s1 - atr
