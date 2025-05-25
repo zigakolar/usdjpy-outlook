@@ -2,65 +2,101 @@
 import os
 import json
 import openai
+import yfinance as yf
+import pandas_ta as ta
+from datetime import datetime
 
 # 1) Load API key
 openai.api_key = os.getenv("OPENAI_API_KEY")
 if not openai.api_key:
     raise RuntimeError("OPENAI_API_KEY not set")
 
-# 2) Define multi-line prompt
-PROMPT = """
-SYSTEM: You are a professional FX analyst.
+# 2) Detect today’s high-volatility event (simplified)
+today = datetime.utcnow().date()
+high_vol_event = None
+# NFP: first Friday of month
+if today.weekday() == 4 and 1 <= today.day <= 7:
+    high_vol_event = "NFP"
+# CPI: assume if day == second Tuesday (approx. day 12-18 and weekday 1)
+if today.weekday() == 1 and 12 <= today.day <= 18:
+    high_vol_event = "CPI"
+# FOMC: stub (requires calendar API)
+# if today matches FOMC schedule:
+#     high_vol_event = "FOMC"
 
-Provide today’s USD/JPY market outlook in JSON+text.
- A) Determine overall direction (Long/Short/Neutral) combining:
-    • Technical: ATR(14), support/resistance, trend.
-    • Fundamental: Fed vs BoJ stance, U.S. macro, geopolitical, and name any high-volatility report (NFP, CPI) or null.
- B) Calculate:
-    • stop_loss just beyond nearest S/R pivot or ±1×ATR.
-    • take_profit_1 at next pivot or ±0.5×ATR.
-    • take_profit_2 at second pivot or ±1.5×ATR.
- C) Next 4–8 hrs: give bias or key level target.
- D) Summary: up to 5 sentences explaining today’s outlook.
+# 3) Fetch intraday data (1h) and compute ATR14 + pivots
+symbol = "JPY=X"  # Yahoo Finance USD/JPY ticker
+df = yf.download(symbol, period="7d", interval="1h", progress=False)
+df["ATR14"] = ta.atr(df["High"], df["Low"], df["Close"], length=14)
+pivots = ta.pivot_points(df["High"], df["Low"], df["Close"])
+df = df.join(pivots)
+last = df.iloc[-1]
+
+o, h, l, c = last["Open"], last["High"], last["Low"], last["Close"]
+atr = last["ATR14"]
+s1, r1 = last["S1"], last["R1"]
+
+# 4) Calculate SL/TP levels
+stop_loss    = s1 - atr
+take_profit_1 = r1 + 0.5 * atr
+take_profit_2 = r1 + 1.0 * atr
+
+# 5) Build prompt with live values
+prompt = f"""
+SYSTEM: You are a professional intraday FX strategist.
+
+Here are the latest 1-hour USD/JPY values:
+  Open={o:.4f}, High={h:.4f}, Low={l:.4f}, Close={c:.4f}
+  ATR(14): {atr:.4f}
+  Pivot S1: {s1:.4f}, Pivot R1: {r1:.4f}
+Today's high-volatility event: {high_vol_event}
+
+Using only these data points (no other news), determine:
+- direction: "Long" | "Short" | "Neutral"
+- stop_loss: just beyond S1 minus 1×ATR
+- take_profit_1: just beyond R1 plus 0.5×ATR
+- take_profit_2: just beyond R1 plus 1×ATR
+- next_window: bias or key level for the next 4–8 hours
+- summary: up to 2 sentences
 
 Respond ONLY with valid JSON exactly:
-{
-  "direction":      "Long|Short|Neutral",
-  "stop_loss":      0,
-  "take_profit_1":  0,
-  "take_profit_2":  0,
-  "high_volatility_report": "..." or null,
-  "next_window":    "...",
-  "summary":        "..."
-}
+{{
+  "direction":"Long|Short|Neutral",
+  "stop_loss": {stop_loss:.4f},
+  "take_profit_1": {take_profit_1:.4f},
+  "take_profit_2": {take_profit_2:.4f},
+  "high_volatility_report": {json.dumps(high_vol_event)},
+  "next_window": "...",
+  "summary": "..."
+}}
 NO extra text.
 """
 
-# 3) Call OpenAI using v1 API interface
+# 6) Call OpenAI and parse response
 try:
     resp = openai.chat.completions.create(
         model="gpt-4-turbo",
         messages=[
-            {"role": "system", "content": "You are a professional FX analyst."},
-            {"role": "user",   "content": PROMPT}
+            {"role": "system", "content": "You are a professional intraday FX strategist."},
+            {"role": "user",   "content": prompt}
         ],
         temperature=0
     )
     content = resp.choices[0].message.content.strip()
     data = json.loads(content)
 except Exception as e:
-    print(f"OpenAI API error, defaulting to fallback: {e}")
+    print(f"OpenAI API error, defaulting fallback: {e}")
     data = {
         "direction": "Neutral",
-        "stop_loss": 0,
-        "take_profit_1": 0,
-        "take_profit_2": 0,
-        "high_volatility_report": None,
+        "stop_loss":  round(stop_loss,4),
+        "take_profit_1": round(take_profit_1,4),
+        "take_profit_2": round(take_profit_2,4),
+        "high_volatility_report": high_vol_event,
         "next_window": "",
         "summary": ""
     }
 
-# 4) Write JSON to file
+# 7) Write JSON to file
 with open("usdjpy.json", "w") as f:
     json.dump(data, f, indent=2)
 
