@@ -7,7 +7,7 @@ import yfinance as yf
 import pandas as pd
 from datetime import datetime
 
-1) Load API keys
+# 1) Load API keys
 
 openai.api_key = os.getenv(“OPENAI_API_KEY”)
 if not openai.api_key:
