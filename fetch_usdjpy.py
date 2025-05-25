@@ -26,19 +26,25 @@ elif today.weekday() == 1 and 8 <= today.day <= 14:
 
 # 3) Fetch intraday data (1h) and compute ATR(14) + pivots manually
 df = yf.download("JPY=X", period="7d", interval="1h", progress=False)
-# True Range computations
-df['prior_close'] = df['Close'].shift(1)
-df['tr1'] = df['High'] - df['Low']
-df['tr2'] = (df['High'] - df['prior_close']).abs()
-df['tr3'] = (df['Low'] - df['prior_close']).abs()
-df['TR'] = df[['tr1','tr2','tr3']].max(axis=1)
+# Prepare price series
+high = df['High']
+low = df['Low']
+close = df['Close']
+# Compute True Range components
+pc = close.shift(1)
+tr1 = high - low
+tr2 = (high - pc).abs()
+tr3 = (low - pc).abs()
+# Combine and compute TR
+tr = pd.concat([tr1, tr2, tr3], axis=1).max(axis=1)
+df['TR'] = tr
 # ATR(14)
 df['ATR14'] = df['TR'].rolling(window=14).mean()
 # Pivot, S1, R1
-pivot = (df['High'] + df['Low'] + df['Close']) / 3
+pivot = (high + low + close) / 3
 df['pivot'] = pivot
-df['S1'] = 2 * pivot - df['High']
-df['R1'] = 2 * pivot - df['Low']
+df['S1'] = 2 * pivot - high
+df['R1'] = 2 * pivot - low
 
 # Get latest bar values
 last = df.dropna().iloc[-1]
