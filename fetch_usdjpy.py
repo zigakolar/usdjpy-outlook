@@ -67,30 +67,30 @@ stop_loss     = s1 - atr
 take_profit_1 = r1 + 0.5 * atr
 take_profit_2 = r1 + 1.0 * atr
 
-# 5) Build prompt with live values
+# 5) Build prompt with live values using explicit float casts to ensure scalar formatting
 prompt = f"""
 SYSTEM: You are a professional intraday FX strategist.
 
 Here are the latest 1-hour USD/JPY values:
-  Open={O:.4f}, High={H:.4f}, Low={L:.4f}, Close={C:.4f}
-  ATR(14): {atr:.4f}
-  Pivot S1: {s1:.4f}, Pivot R1: {r1:.4f}
+  Open={float(O):.4f}, High={float(H):.4f}, Low={float(L):.4f}, Close={float(C):.4f}
+  ATR(14): {float(atr):.4f}
+  Pivot S1: {float(s1):.4f}, Pivot R1: {float(r1):.4f}
 Today's high-volatility event: {json.dumps(high_vol_event)}
 
 Using only these data points (no other news), determine:
 - direction: "Long" | "Short" | "Neutral"
-- stop_loss: just beyond S1 minus 1×ATR (provided above as {stop_loss:.4f})
-- take_profit_1: just beyond R1 plus 0.5×ATR (provided above as {take_profit_1:.4f})
-- take_profit_2: just beyond R1 plus 1×ATR (provided above as {take_profit_2:.4f})
+- stop_loss: just beyond S1 minus 1×ATR (provided above as {float(stop_loss):.4f})
+- take_profit_1: just beyond R1 plus 0.5×ATR (provided above as {float(take_profit_1):.4f})
+- take_profit_2: just beyond R1 plus 1×ATR (provided above as {float(take_profit_2):.4f})
 - next_window: bias or key level for the next 4–8 hours
 - summary: up to 2 sentences
 
 Respond ONLY with valid JSON exactly:
 {{
   "direction": "Long|Short|Neutral",
-  "stop_loss": {stop_loss:.4f},
-  "take_profit_1": {take_profit_1:.4f},
-  "take_profit_2": {take_profit_2:.4f},
+  "stop_loss": {float(stop_loss):.4f},
+  "take_profit_1": {float(take_profit_1):.4f},
+  "take_profit_2": {float(take_profit_2):.4f},
   "high_volatility_report": {json.dumps(high_vol_event)},
   "next_window": "...",
   "summary": "..."
@@ -98,7 +98,7 @@ Respond ONLY with valid JSON exactly:
 NO extra text.
 """
 
-# 6) Call OpenAI and parse response
+# 6) Call OpenAI and parse response and parse response
 try:
     resp = openai.chat.completions.create(
         model="gpt-4-turbo",
