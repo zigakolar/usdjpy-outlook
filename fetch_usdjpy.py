@@ -3,7 +3,7 @@ import os
 import json
 import openai
 import yfinance as yf
-import pandas_ta as ta
+import pandas as pd
 from datetime import datetime
 
 # 1) Load API key
@@ -14,30 +14,39 @@ if not openai.api_key:
 # 2) Detect today’s high-volatility event (simplified)
 today = datetime.utcnow().date()
 high_vol_event = None
-# NFP: first Friday of month
+# NFP: first Friday of month (approx days 1–7, weekday=4)
 if today.weekday() == 4 and 1 <= today.day <= 7:
     high_vol_event = "NFP"
-# CPI: assume if day == second Tuesday (approx. day 12-18 and weekday 1)
-if today.weekday() == 1 and 12 <= today.day <= 18:
+# CPI: second Tuesday (approx days 8–14, weekday=1)
+elif today.weekday() == 1 and 8 <= today.day <= 14:
     high_vol_event = "CPI"
-# FOMC: stub (requires calendar API)
-# if today matches FOMC schedule:
+# FOMC placeholder (requires calendar API)
+# elif matches FOMC schedule:
 #     high_vol_event = "FOMC"
 
-# 3) Fetch intraday data (1h) and compute ATR14 + pivots
-symbol = "JPY=X"  # Yahoo Finance USD/JPY ticker
-df = yf.download(symbol, period="7d", interval="1h", progress=False)
-df["ATR14"] = ta.atr(df["High"], df["Low"], df["Close"], length=14)
-pivots = ta.pivot_points(df["High"], df["Low"], df["Close"])
-df = df.join(pivots)
-last = df.iloc[-1]
+# 3) Fetch intraday data (1h) and compute ATR(14) + pivots manually
+df = yf.download("JPY=X", period="7d", interval="1h", progress=False)
+# True Range computations
+df['prior_close'] = df['Close'].shift(1)
+df['tr1'] = df['High'] - df['Low']
+df['tr2'] = (df['High'] - df['prior_close']).abs()
+df['tr3'] = (df['Low'] - df['prior_close']).abs()
+df['TR'] = df[['tr1','tr2','tr3']].max(axis=1)
+# ATR(14)
+df['ATR14'] = df['TR'].rolling(window=14).mean()
+# Pivot, S1, R1
+pivot = (df['High'] + df['Low'] + df['Close']) / 3
+df['pivot'] = pivot
+df['S1'] = 2 * pivot - df['High']
+df['R1'] = 2 * pivot - df['Low']
 
-o, h, l, c = last["Open"], last["High"], last["Low"], last["Close"]
-atr = last["ATR14"]
-s1, r1 = last["S1"], last["R1"]
+# Get latest bar values
+last = df.dropna().iloc[-1]
+O = last['Open']; H = last['High']; L = last['Low']; C = last['Close']
+atr = last['ATR14']; s1 = last['S1']; r1 = last['R1']
 
-# 4) Calculate SL/TP levels
-stop_loss    = s1 - atr
+# 4) Calculate SL/TP levels based on ATR + pivots
+stop_loss     = s1 - atr
 take_profit_1 = r1 + 0.5 * atr
 take_profit_2 = r1 + 1.0 * atr
 
@@ -46,22 +55,22 @@ prompt = f"""
 SYSTEM: You are a professional intraday FX strategist.
 
 Here are the latest 1-hour USD/JPY values:
-  Open={o:.4f}, High={h:.4f}, Low={l:.4f}, Close={c:.4f}
+  Open={O:.4f}, High={H:.4f}, Low={L:.4f}, Close={C:.4f}
   ATR(14): {atr:.4f}
   Pivot S1: {s1:.4f}, Pivot R1: {r1:.4f}
-Today's high-volatility event: {high_vol_event}
+Today's high-volatility event: {json.dumps(high_vol_event)}
 
 Using only these data points (no other news), determine:
 - direction: "Long" | "Short" | "Neutral"
-- stop_loss: just beyond S1 minus 1×ATR
-- take_profit_1: just beyond R1 plus 0.5×ATR
-- take_profit_2: just beyond R1 plus 1×ATR
+- stop_loss: just beyond S1 minus 1×ATR (provided above as {stop_loss:.4f})
+- take_profit_1: just beyond R1 plus 0.5×ATR (provided above as {take_profit_1:.4f})
+- take_profit_2: just beyond R1 plus 1×ATR (provided above as {take_profit_2:.4f})
 - next_window: bias or key level for the next 4–8 hours
 - summary: up to 2 sentences
 
 Respond ONLY with valid JSON exactly:
 {{
-  "direction":"Long|Short|Neutral",
+  "direction": "Long|Short|Neutral",
   "stop_loss": {stop_loss:.4f},
   "take_profit_1": {take_profit_1:.4f},
   "take_profit_2": {take_profit_2:.4f},
@@ -88,7 +97,7 @@ except Exception as e:
     print(f"OpenAI API error, defaulting fallback: {e}")
     data = {
         "direction": "Neutral",
-        "stop_loss":  round(stop_loss,4),
+        "stop_loss": round(stop_loss,4),
         "take_profit_1": round(take_profit_1,4),
         "take_profit_2": round(take_profit_2,4),
         "high_volatility_report": high_vol_event,
