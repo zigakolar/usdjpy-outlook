@@ -12,9 +12,10 @@ if not openai.api_key:
     raise RuntimeError("OPENAI_API_KEY not set")
 
 # 2) Detect today’s high-volatility event (simplified)
-today = datetime.utcnow().date()
-high_vol_event = None
+# Default to string "None" for no event
+high_vol_event = "None"
 # NFP: first Friday of month (approx days 1–7, weekday=4)
+today = datetime.utcnow().date()
 if today.weekday() == 4 and 1 <= today.day <= 7:
     high_vol_event = "NFP"
 # CPI: second Tuesday (approx days 8–14, weekday=1)
@@ -24,7 +25,7 @@ elif today.weekday() == 1 and 8 <= today.day <= 14:
 # elif matches FOMC schedule:
 #     high_vol_event = "FOMC"
 
-# 3) Fetch intraday data (1h) and compute ATR(14) + pivots manually
+# 3) Fetch intraday data (1h) and compute ATR(14) + pivots manually (1h) and compute ATR(14) + pivots manually
 df = yf.download("JPY=X", period="7d", interval="1h", progress=False)
 # Prepare price series
 high = df['High']
