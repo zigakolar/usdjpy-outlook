@@ -4,6 +4,6 @@
   "take_profit_1": 142.6789,
   "take_profit_2": 142.8079,
   "high_volatility_report": "None",
-  "next_window": "Monitor for breakout from the narrow range.",
-  "summary": "With no high-volatility events and all data points identical, indicating no movement, the recommendation is to maintain a neutral position until a clearer trend emerges."
+  "next_window": "Monitor for any breakout from the current level as the market is currently in a tight range.",
+  "summary": "With no price movement in the last hour and no high-volatility events reported, the market is expected to remain stable. Maintain a neutral stance until a clearer trend emerges."
 }
