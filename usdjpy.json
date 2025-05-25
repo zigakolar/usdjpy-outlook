@@ -4,6 +4,6 @@
   "take_profit_1": 142.6789,
   "take_profit_2": 142.8079,
   "high_volatility_report": "None",
-  "next_window": "Monitor for breakout from the narrow range for directional bias.",
-  "summary": "With no high-volatility events and all data points identical, indicating no movement, the recommendation is to maintain a neutral position until a clearer trend emerges."
+  "next_window": "Monitor for breakout from the narrow range.",
+  "summary": "With no high-volatility events and all price points identical, the market is in a state of equilibrium with no clear directional bias."
 }
