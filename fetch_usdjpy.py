@@ -46,12 +46,19 @@ df['pivot'] = pivot
 df['S1'] = 2 * pivot - high
 df['R1'] = 2 * pivot - low
 
-# Get latest bar values
-last = df.dropna().iloc[-1]
-O = last['Open']; H = last['High']; L = last['Low']; C = last['Close']
-atr = last['ATR14']; s1 = last['S1']; r1 = last['R1']
+# 3.5) Extract latest values as scalars using .iat
+O = df['Open'].iat[-1]
+H = df['High'].iat[-1]
+L = df['Low'].iat[-1]
+C = df['Close'].iat[-1]
+atr = df['ATR14'].iat[-1]
+s1 = df['S1'].iat[-1]
+r1 = df['R1'].iat[-1]
 
 # 4) Calculate SL/TP levels based on ATR + pivots
+stop_loss     = s1 - atr
+take_profit_1 = r1 + 0.5 * atr
+take_profit_2 = r1 + 1.0 * atr
 stop_loss     = s1 - atr
 take_profit_1 = r1 + 0.5 * atr
 take_profit_2 = r1 + 1.0 * atr
