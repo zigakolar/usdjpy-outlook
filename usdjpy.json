@@ -1,9 +1,9 @@
 {
-  "direction": "Long",
-  "stop_loss": 144.078,
-  "take_profit_1": 144.2887,
-  "take_profit_2": 144.4495,
+  "direction": "Neutral",
+  "stop_loss": 144.222,
+  "take_profit_1": 144.3087,
+  "take_profit_2": 144.35,
   "high_volatility_report": "None",
-  "next_window": "Watch for a break above Pivot R1 at 144.2887, which could lead to further bullish momentum towards 144.4495.",
-  "summary": "DXY stability with a close near its Pivot R1 suggests underlying USD strength, supporting a bullish bias for USD/JPY. The absence of high-volatility U.S. events today may limit extreme fluctuations, favoring a continuation of current trends."
+  "next_window": "Monitor for a break above 144.3087 or below 144.2220 for directional bias.",
+  "summary": "With the DXY showing minimal movement and pivoting near its current level, the outlook for USD/JPY remains neutral in the absence of high-volatility U.S. events."
 }
