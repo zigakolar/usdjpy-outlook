@@ -1,9 +1,9 @@
 {
   "direction": "Neutral",
-  "stop_loss": 144.4602,
-  "take_profit_1": 145.3404,
-  "take_profit_2": 145.5301,
+  "stop_loss": 144.5667,
+  "take_profit_1": 145.2501,
+  "take_profit_2": 145.4403,
   "high_volatility_report": "None",
-  "next_window": "Monitor for a break above 145.1507 or below 144.8397 for directional bias.",
-  "summary": "Given the DXY's close proximity to its pivot point without clear directional momentum, a neutral stance on USD/JPY is advisable until further USD strength or weakness is indicated."
+  "next_window": "",
+  "summary": ""
 }
