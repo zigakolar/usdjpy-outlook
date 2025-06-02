@@ -1,9 +1,9 @@
 {
-  "direction": "Neutral",
-  "stop_loss": 142.2532,
-  "take_profit_1": 142.9704,
-  "take_profit_2": 143.0878,
+  "direction": "Long",
+  "stop_loss": 142.625,
+  "take_profit_1": 142.823,
+  "take_profit_2": 142.9362,
   "high_volatility_report": "None",
-  "next_window": "",
-  "summary": ""
+  "next_window": "Watch for a potential test of 142.8230, if surpassed, next resistance at 142.9362.",
+  "summary": "Given the stable DXY close to its pivot R1 and a slight uptrend, a long position on USD/JPY is supported. The DXY strength indicates potential further upside for USD/JPY."
 }
