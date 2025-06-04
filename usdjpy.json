@@ -1,9 +1,9 @@
 {
-  "direction": "Long",
-  "stop_loss": 143.843,
-  "take_profit_1": 144.0777,
-  "take_profit_2": 144.2272,
+  "direction": "Neutral",
+  "stop_loss": 143.7698,
+  "take_profit_1": 144.4596,
+  "take_profit_2": 144.6145,
   "high_volatility_report": "None",
-  "next_window": "Watch for stability above Pivot R1 at 144.0777 for further bullish momentum.",
-  "summary": "Given the stable DXY close at 99.14 and a slight uptrend, DXY strength supports a bullish bias for USD/JPY, suggesting potential for further upside."
+  "next_window": "",
+  "summary": ""
 }
