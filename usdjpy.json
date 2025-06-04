@@ -1,9 +1,9 @@
 {
-  "direction": "Neutral",
-  "stop_loss": 143.7698,
-  "take_profit_1": 144.4596,
-  "take_profit_2": 144.6145,
+  "direction": "Long",
+  "stop_loss": 144.136,
+  "take_profit_1": 144.3427,
+  "take_profit_2": 144.4914,
   "high_volatility_report": "None",
-  "next_window": "",
-  "summary": ""
+  "next_window": "Watch for a break above 144.3427 to confirm continuation of uptrend.",
+  "summary": "Given the stability in the DXY and its slight upward pivot, combined with USD/JPY's close near its high, a long position is favored. DXY strength supports USDJPY longs."
 }
