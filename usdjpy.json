@@ -1,9 +1,9 @@
 {
-  "direction": "Long",
-  "stop_loss": 143.8349,
-  "take_profit_1": 144.2806,
-  "take_profit_2": 144.3811,
+  "direction": "Neutral",
+  "stop_loss": 143.7435,
+  "take_profit_1": 144.2452,
+  "take_profit_2": 144.3471,
   "high_volatility_report": "None",
-  "next_window": "Watch for a potential retest of Pivot R1 at 144.1800, which could serve as a resistance-turned-support level in the next 4-8 hours.",
-  "summary": "Given the stable DXY close near its Pivot R1, indicating underlying USD strength, a long position on USD/JPY is supported. The absence of high-volatility U.S. events today suggests a continuation of current trends."
+  "next_window": "",
+  "summary": ""
 }
