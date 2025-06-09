@@ -1,9 +1,9 @@
 {
-  "direction": "Short",
-  "stop_loss": 144.622,
-  "take_profit_1": 144.3127,
-  "take_profit_2": 144.1039,
+  "direction": "Long",
+  "stop_loss": 144.1544,
+  "take_profit_1": 144.5568,
+  "take_profit_2": 144.6596,
   "high_volatility_report": "None",
-  "next_window": "Watch for a break below 144.3127 for further downside potential.",
-  "summary": "Given the DXY's slight downward bias with a close near its pivot S1 and a narrow ATR, coupled with USD/JPY closing at its low, a short position is favored. DXY's current weakness suggests limited support for USD strength against JPY."
+  "next_window": "Watch for a potential resistance test at Pivot R1 (144.4540) in the next 4-8 hours.",
+  "summary": "Given the stable DXY close to its Pivot R1 at 99.00, underlying USD strength supports a bullish bias for USD/JPY. The absence of high-volatility U.S. events today further stabilizes the trading environment, favoring long positions."
 }
