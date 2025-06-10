@@ -1,9 +1,9 @@
 {
-  "direction": "Neutral",
-  "stop_loss": 144.296,
-  "take_profit_1": 144.9695,
+  "direction": "Long",
+  "stop_loss": 144.79,
+  "take_profit_1": 144.9847,
   "take_profit_2": 145.1036,
   "high_volatility_report": "None",
-  "next_window": "",
-  "summary": ""
+  "next_window": "Watch for a potential resistance test at 145.1036. Maintain a bullish outlook unless DXY shows significant weakness.",
+  "summary": "Given the closing proximity to Pivot R1 and a stable DXY close near its Pivot R1, DXY strength supports a bullish bias for USD/JPY in the short term."
 }
