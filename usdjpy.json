@@ -1,9 +1,9 @@
 {
-  "direction": "Short",
-  "stop_loss": 144.845,
-  "take_profit_1": 144.4677,
-  "take_profit_2": 144.1609,
+  "direction": "Long",
+  "stop_loss": 144.435,
+  "take_profit_1": 144.669,
+  "take_profit_2": 144.8218,
   "high_volatility_report": "None",
-  "next_window": "Watch for a break below 144.5550 for further downside confirmation.",
-  "summary": "Given the narrow range and slight decline in the DXY, a cautious short position on USD/JPY is suggested, anticipating potential USD weakness."
+  "next_window": "Watch for a break above Pivot R1 at 144.6690, which could lead to further bullish momentum towards 144.8218 in the next 4-8 hours.",
+  "summary": "Given the stable DXY close near its Pivot R1, indicating underlying USD strength, a long position in USD/JPY is supported. The current USD/JPY price is near the pivot point, suggesting potential for upward movement."
 }
