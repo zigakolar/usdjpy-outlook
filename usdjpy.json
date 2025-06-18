@@ -1,9 +1,9 @@
 {
-  "direction": "Long",
-  "stop_loss": 144.808,
-  "take_profit_1": 144.892,
-  "take_profit_2": 144.9756,
+  "direction": "Neutral",
+  "stop_loss": 144.5386,
+  "take_profit_1": 144.9562,
+  "take_profit_2": 145.0434,
   "high_volatility_report": "None",
-  "next_window": "Watch for a break above Pivot R1 at 144.8920 for further bullish momentum.",
-  "summary": "Given the stable DXY close near its pivot R1, combined with a narrow trading range in USD/JPY, a long position is favored as DXY strength supports USD/JPY gains."
+  "next_window": "Monitor for a break above 144.8690 or below 144.7130 for directional bias.",
+  "summary": "Given the stable DXY close at 98.72 with minimal volatility, and USD/JPY closing at the low end of its range, a neutral stance is appropriate until further price action provides clearer direction."
 }
