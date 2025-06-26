@@ -1,9 +1,9 @@
 {
-  "direction": "Long",
-  "stop_loss": 143.894,
-  "take_profit_1": 144.0607,
-  "take_profit_2": 144.1887,
+  "direction": "Neutral",
+  "stop_loss": 144.055,
+  "take_profit_1": 144.1457,
+  "take_profit_2": 144.175,
   "high_volatility_report": "None",
-  "next_window": "Watch for a potential resistance test at 144.0607 in the next 4-8 hours, maintaining a bullish bias unless DXY shows significant weakness.",
-  "summary": "Given the close proximity of DXY's pivot R1 and its current level, the slight uptrend in DXY supports a bullish outlook for USD/JPY. The strategy aligns with the observed stability and upward momentum in the USD/JPY pair."
+  "next_window": "Monitor for breakout above 144.1750 or below 144.0550 for directional bias.",
+  "summary": "With no high-volatility U.S. events and a stable DXY, maintaining a neutral stance on USD/JPY seems prudent. DXY's narrow pivot range suggests limited USD strength, aligning with a cautious approach on USD/JPY."
 }
