@@ -1,9 +1,9 @@
 {
   "direction": "Neutral",
-  "stop_loss": 144.3851,
-  "take_profit_1": 144.73,
-  "take_profit_2": 144.8449,
+  "stop_loss": 143.5889,
+  "take_profit_1": 144.0446,
+  "take_profit_2": 144.1571,
   "high_volatility_report": "None",
-  "next_window": "Monitor DXY for breakout above 97.32 or below 97.21 for directional cues.",
-  "summary": "With no high-volatility US events and stable DXY readings, maintaining a neutral stance on USD/JPY is prudent. DXY stability around its pivot points suggests limited directional momentum for USD/JPY in the immediate term."
+  "next_window": "",
+  "summary": ""
 }
