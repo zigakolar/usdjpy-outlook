@@ -1,9 +1,9 @@
 {
-  "direction": "Long",
-  "stop_loss": 146.344,
-  "take_profit_1": 146.5687,
-  "take_profit_2": 146.6894,
+  "direction": "Neutral",
+  "stop_loss": 146.549,
+  "take_profit_1": 146.6597,
+  "take_profit_2": 146.671,
   "high_volatility_report": "None",
-  "next_window": "Watch for a potential retest of the Pivot R1 at 146.5687, which could extend to 146.6894 if DXY remains stable or strengthens.",
-  "summary": "Given the close proximity of DXY to its Pivot R1 and its recent stability, a supportive backdrop for USD strength is likely, favoring a long position in USD/JPY."
+  "next_window": "Monitor for a break above 146.6710 or below 146.5490 for directional bias.",
+  "summary": "With the DXY showing minimal movement and pivoting around 97.78, and no high-volatility U.S. events, a neutral stance on USD/JPY is advisable until clearer signals emerge."
 }
