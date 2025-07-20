@@ -1,9 +1,9 @@
 {
-  "direction": "Neutral",
-  "stop_loss": 148.4741,
-  "take_profit_1": 148.9384,
-  "take_profit_2": 149.0392,
+  "direction": "Long",
+  "stop_loss": 148.691,
+  "take_profit_1": 148.8377,
+  "take_profit_2": 148.853,
   "high_volatility_report": "None",
-  "next_window": "",
-  "summary": ""
+  "next_window": "Monitor for a break above Pivot R1 at 148.8377, which could lead to further bullish momentum towards 148.8530.",
+  "summary": "Given the stable DXY close at 98.46 and a narrow range, the slight uptick in USD/JPY towards the close suggests underlying USD strength. This supports a long position in USD/JPY, targeting initial resistance levels."
 }
