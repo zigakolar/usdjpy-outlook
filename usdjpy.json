@@ -1,9 +1,9 @@
 {
-  "direction": "Short",
-  "stop_loss": 147.215,
-  "take_profit_1": 146.7323,
-  "take_profit_2": 146.4196,
+  "direction": "Neutral",
+  "stop_loss": 146.3061,
+  "take_profit_1": 147.0044,
+  "take_profit_2": 147.1695,
   "high_volatility_report": "None",
-  "next_window": "Watch for a break below Pivot S1 at 146.7323, which could accelerate downward momentum.",
-  "summary": "Given the close proximity of DXY to its Pivot S1 and minimal movement, combined with USD/JPY closing at its low, a cautious short approach is recommended. DXY's stability suggests limited support for a strong USD push, aligning with a potential further drop in USD/JPY."
+  "next_window": "Monitor for a break above Pivot R1 at 146.8393 or below Pivot S1 at 146.6363 for directional bias.",
+  "summary": "Given the narrow range and low volatility in both USD/JPY and DXY, a neutral stance is appropriate. DXY's stability around its pivot points suggests limited directional momentum for USD/JPY in the immediate term."
 }
