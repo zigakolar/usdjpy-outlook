@@ -1,9 +1,9 @@
 {
   "direction": "Short",
-  "stop_loss": 150.597,
-  "take_profit_1": 149.076,
-  "take_profit_2": 148.7017,
+  "stop_loss": 148.661,
+  "take_profit_1": 147.7957,
+  "take_profit_2": 147.4188,
   "high_volatility_report": "None",
-  "next_window": "Watch for a potential retest of Pivot S1 at 148.7017, which could act as a key support level in the next 4-8 hours.",
-  "summary": "Despite the stable DXY, the significant drop in USD/JPY from its high suggests underlying weakness, supporting a short position. DXY stability does not offset the bearish momentum observed in USD/JPY."
+  "next_window": "Watch for a potential retest of Pivot S1 at 147.7957, if broken, next key level is 147.4188.",
+  "summary": "Given the recent decline in USD/JPY and a relatively stable DXY, the pressure on USD/JPY may continue, suggesting a short bias. DXY stability around its pivot point does not provide strong support for a bullish reversal in USD/JPY."
 }
