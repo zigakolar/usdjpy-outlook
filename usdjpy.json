@@ -1,9 +1,9 @@
 {
   "direction": "Long",
-  "stop_loss": 147.689,
-  "take_profit_1": 147.8777,
-  "take_profit_2": 147.9723,
+  "stop_loss": 147.745,
+  "take_profit_1": 147.921,
+  "take_profit_2": 148.0167,
   "high_volatility_report": "None",
-  "next_window": "Watch for a potential retest of Pivot R1 at 147.8777, which if broken could lead to further upside towards 148.00 in the next 4-8 hours.",
-  "summary": "Given the stable DXY close to its Pivot R1 and a slight uptrend in the USD/JPY pair, DXY strength moderately supports a bullish bias for USD/JPY."
+  "next_window": "Watch for a break above 147.9210 to confirm continued bullish momentum, potentially targeting the 148.00 psychological level.",
+  "summary": "Given the stable DXY close at 98.11 with a slight upward pivot bias, and USD/JPY closing near its high, DXY strength supports a bullish outlook for USD/JPY."
 }
