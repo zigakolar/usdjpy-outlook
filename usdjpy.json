@@ -1,9 +1,9 @@
 {
   "direction": "Neutral",
-  "stop_loss": 148.4103,
-  "take_profit_1": 148.5203,
-  "take_profit_2": 148.5998,
+  "stop_loss": 148.392,
+  "take_profit_1": 148.692,
+  "take_profit_2": 148.773,
   "high_volatility_report": "None",
-  "next_window": "Monitor DXY for shifts above 98.76 or below 98.71 for directional cues.",
-  "summary": "With the DXY showing minimal movement and pivoting around 98.73, and USD/JPY closing at its low without breaking the pivot S1, a neutral stance is appropriate until further USD strength or weakness is indicated."
+  "next_window": "",
+  "summary": ""
 }
