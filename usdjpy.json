@@ -1,9 +1,9 @@
 {
   "direction": "Neutral",
-  "stop_loss": 147.501,
-  "take_profit_1": 147.6177,
-  "take_profit_2": 147.623,
+  "stop_loss": 147.099,
+  "take_profit_1": 147.6845,
+  "take_profit_2": 147.8186,
   "high_volatility_report": "None",
-  "next_window": "Monitor DXY for shifts around Pivot R1 at 98.27 for directional cues.",
-  "summary": "With the DXY showing minimal movement and pivoting narrowly around 98.26, the bias for USD/JPY remains neutral as there is no significant momentum to support a directional move."
+  "next_window": "",
+  "summary": ""
 }
