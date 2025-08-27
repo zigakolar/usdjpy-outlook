@@ -1,9 +1,9 @@
 {
   "direction": "Neutral",
-  "stop_loss": 147.8054,
-  "take_profit_1": 148.2173,
-  "take_profit_2": 148.3029,
+  "stop_loss": 147.912,
+  "take_profit_1": 148.1113,
+  "take_profit_2": 148.1981,
   "high_volatility_report": "None",
-  "next_window": "",
-  "summary": ""
+  "next_window": "Monitor DXY for breakout above 98.62 for potential bullish momentum in USD/JPY.",
+  "summary": "Given the stable DXY close and lack of high-volatility U.S. events, a neutral stance on USD/JPY is advisable. Watch DXY for shifts that could influence USD strength and adjust USD/JPY positions accordingly."
 }
