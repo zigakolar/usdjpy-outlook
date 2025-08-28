@@ -1,9 +1,9 @@
 {
-  "direction": "Neutral",
-  "stop_loss": 146.8644,
-  "take_profit_1": 147.2433,
-  "take_profit_2": 147.3406,
+  "direction": "Long",
+  "stop_loss": 146.804,
+  "take_profit_1": 146.97,
+  "take_profit_2": 147.0716,
   "high_volatility_report": "None",
-  "next_window": "Monitor for a break above 147.1460 or below 147.0590 for directional bias.",
-  "summary": "With the DXY showing minimal movement and pivoting narrowly around 98.07, there is no strong directional bias for USD/JPY at this moment. The neutral stance is recommended until further signals in the DXY or USD/JPY price action."
+  "next_window": "Watch for a break above Pivot R1 at 146.9700 for further bullish momentum.",
+  "summary": "Given the stable DXY close to its Pivot R1 and a slight uptrend, DXY strength supports a bullish bias for USD/JPY, suggesting potential for further upside."
 }
