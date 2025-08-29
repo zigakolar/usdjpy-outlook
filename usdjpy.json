@@ -1,9 +1,9 @@
 {
-  "direction": "Neutral",
-  "stop_loss": 147.1,
-  "take_profit_1": 147.1873,
-  "take_profit_2": 147.2693,
+  "direction": "Long",
+  "stop_loss": 146.945,
+  "take_profit_1": 147.031,
+  "take_profit_2": 147.1185,
   "high_volatility_report": "None",
-  "next_window": "Monitor for a break above 147.1873 or below 147.1063 for directional bias.",
-  "summary": "With the DXY showing minimal movement and pivoting around 98.00, and no high-volatility events expected, a neutral stance on USD/JPY is advisable until clearer signals emerge."
+  "next_window": "Watch for a break above 147.0310 to confirm further bullish momentum, potentially targeting 147.1185.",
+  "summary": "Given the stability in the DXY and its slight upward pivot, a long position in USD/JPY is supported, anticipating strength in the USD against the JPY."
 }
