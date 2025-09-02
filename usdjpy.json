@@ -1,9 +1,9 @@
 {
-  "direction": "Short",
-  "stop_loss": 148.41,
-  "take_profit_1": 147.8893,
-  "take_profit_2": 147.552,
+  "direction": "Neutral",
+  "stop_loss": 147.7724,
+  "take_profit_1": 148.4443,
+  "take_profit_2": 148.6083,
   "high_volatility_report": "None",
-  "next_window": "Watch for a potential rebound from Pivot S1 or further decline if DXY weakens.",
-  "summary": "Given the close proximity of USD/JPY to its daily low and a stable DXY, a short position aligns with the expectation of USD weakness. DXY stability near its pivot suggests limited upward momentum for USD, supporting a bearish bias for USD/JPY."
+  "next_window": "",
+  "summary": ""
 }
