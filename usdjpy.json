@@ -1,9 +1,9 @@
 {
-  "direction": "Long",
-  "stop_loss": 148.606,
-  "take_profit_1": 148.8607,
-  "take_profit_2": 148.9546,
+  "direction": "Neutral",
+  "stop_loss": 148.365,
+  "take_profit_1": 148.841,
+  "take_profit_2": 148.9466,
   "high_volatility_report": "None",
-  "next_window": "Watch for a potential retest of the 148.8607 level, which could serve as a new support or resistance in the next 4-8 hours.",
-  "summary": "Given the stable DXY close to its pivot R1 and a closing high on USD/JPY, DXY strength supports a bullish outlook for USD/JPY."
+  "next_window": "",
+  "summary": ""
 }
