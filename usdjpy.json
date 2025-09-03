@@ -1,9 +1,9 @@
 {
-  "direction": "Short",
-  "stop_loss": 148.638,
-  "take_profit_1": 147.8913,
-  "take_profit_2": 147.6265,
+  "direction": "Neutral",
+  "stop_loss": 147.7492,
+  "take_profit_1": 148.3339,
+  "take_profit_2": 148.4665,
   "high_volatility_report": "None",
-  "next_window": "Watch for a break below Pivot S1 at 147.8913, which could accelerate declines towards 147.6265.",
-  "summary": "Given the narrow range and slight decline in the DXY, coupled with USD/JPY closing near its low, a short position is favored. DXY's stability below Pivot R1 suggests limited upside potential for USD, supporting a bearish outlook for USD/JPY."
+  "next_window": "",
+  "summary": ""
 }
