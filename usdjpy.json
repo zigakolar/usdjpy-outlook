@@ -1,9 +1,9 @@
 {
-  "direction": "Long",
-  "stop_loss": 148.129,
-  "take_profit_1": 148.193,
-  "take_profit_2": 148.257,
+  "direction": "Short",
+  "stop_loss": 147.7,
+  "take_profit_1": 147.166,
+  "take_profit_2": 146.996,
   "high_volatility_report": "None",
-  "next_window": "Monitor for a break above 148.1930, which could lead to further bullish momentum towards 148.2570.",
-  "summary": "Given the stability in the DXY with a narrow pivot range indicating limited USD volatility, a long position on USD/JPY is supported, anticipating strength in USD against JPY."
+  "next_window": "Watch for a break below Pivot S1 at 146.9960, which could accelerate downward momentum.",
+  "summary": "Despite a stable DXY, the USD/JPY pair shows potential for further declines as it closed significantly lower than its open, suggesting underlying weakness. DXY stability does not necessarily counteract the bearish signals from the USD/JPY price action."
 }
