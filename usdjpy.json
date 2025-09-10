@@ -1,9 +1,9 @@
 {
-  "direction": "Short",
-  "stop_loss": 147.604,
-  "take_profit_1": 147.22,
-  "take_profit_2": 147.12,
+  "direction": "Neutral",
+  "stop_loss": 147.26,
+  "take_profit_1": 147.3447,
+  "take_profit_2": 147.363,
   "high_volatility_report": "None",
-  "next_window": "Watch for a break below 147.2200 for further downside confirmation.",
-  "summary": "Given the narrow range and slight decline in the DXY, coupled with USD/JPY closing near its low, a short position is favored. DXY's stability below its pivot suggests limited upside for USD, supporting a bearish bias for USD/JPY."
+  "next_window": "Monitor for a break above 147.3630 or below 147.2600 for directional bias.",
+  "summary": "With the DXY showing minimal movement and pivoting around 97.64, and no high-volatility U.S. events, a neutral stance on USD/JPY is advisable until clearer signals emerge."
 }
