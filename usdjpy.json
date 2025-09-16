@@ -1,9 +1,9 @@
 {
   "direction": "Neutral",
-  "stop_loss": 147.1303,
-  "take_profit_1": 147.4798,
-  "take_profit_2": 147.5517,
+  "stop_loss": 146.8336,
+  "take_profit_1": 147.0442,
+  "take_profit_2": 147.1144,
   "high_volatility_report": "None",
-  "next_window": "",
-  "summary": ""
+  "next_window": "Monitor for breakout from 146.9740, key level to watch.",
+  "summary": "With no significant movement in USD/JPY and stable DXY readings, maintaining a neutral stance is advisable. DXY stability does not provide a clear directional bias for USDJPY at this time."
 }
