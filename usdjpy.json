@@ -1,9 +1,9 @@
 {
   "direction": "Long",
-  "stop_loss": 148.695,
-  "take_profit_1": 148.7823,
-  "take_profit_2": 148.8613,
+  "stop_loss": 148.68,
+  "take_profit_1": 148.788,
+  "take_profit_2": 148.868,
   "high_volatility_report": "None",
-  "next_window": "Watch for a break above Pivot R1 at 148.7823, which could lead to further bullish momentum towards 148.8613.",
-  "summary": "Given the stable DXY close at 97.85 and a slight uptrend within its pivot range, DXY strength supports a bullish bias for USD/JPY. The pair's close near the high of the session aligns with this outlook."
+  "next_window": "Watch for a break above Pivot R1 at 148.7880, which could lead to further bullish momentum towards 148.8680.",
+  "summary": "Given the stability in the DXY and its close proximity to its Pivot R1, combined with USD/JPY's closing near its high, a bullish bias is supported. DXY strength underpins potential gains in USD/JPY, suggesting a long position."
 }
