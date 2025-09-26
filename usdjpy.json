@@ -1,9 +1,9 @@
 {
   "direction": "Neutral",
-  "stop_loss": 149.807,
-  "take_profit_1": 149.8843,
-  "take_profit_2": 149.898,
+  "stop_loss": 149.4439,
+  "take_profit_1": 149.9286,
+  "take_profit_2": 150.0115,
   "high_volatility_report": "None",
-  "next_window": "Monitor for a break above 149.8980 or below 149.8070 for directional bias.",
-  "summary": "With the DXY showing minimal movement and pivoting around 98.50, there is no clear directional bias for USD/JPY in the immediate term. The stability in DXY suggests a neutral stance for USD/JPY until further price action provides clarity."
+  "next_window": "",
+  "summary": ""
 }
