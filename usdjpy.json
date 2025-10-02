@@ -1,9 +1,9 @@
 {
   "direction": "Neutral",
-  "stop_loss": 147.064,
-  "take_profit_1": 147.1793,
-  "take_profit_2": 147.3016,
+  "stop_loss": 147.198,
+  "take_profit_1": 147.3207,
+  "take_profit_2": 147.329,
   "high_volatility_report": "None",
-  "next_window": "Monitor for a break above 147.1793 or below 147.0713 for directional bias.",
-  "summary": "With the DXY showing minimal movement and pivoting around 97.75, and no high-volatility US events expected, a neutral stance on USD/JPY is advisable until clearer signals emerge."
+  "next_window": "Monitor DXY for breakout above 97.94 or below 97.86 for clearer direction.",
+  "summary": "With no high-volatility U.S. events and DXY showing minor fluctuations within a tight range, a neutral stance on USD/JPY is advisable until clearer signals emerge."
 }
