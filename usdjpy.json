@@ -1,9 +1,9 @@
 {
-  "direction": "Long",
-  "stop_loss": 150.261,
-  "take_profit_1": 150.371,
-  "take_profit_2": 150.4,
+  "direction": "Short",
+  "stop_loss": 150.349,
+  "take_profit_1": 150.035,
+  "take_profit_2": 149.9,
   "high_volatility_report": "None",
-  "next_window": "Watch for a break above Pivot R1 at 150.3710 for further bullish momentum.",
-  "summary": "Given the stability in the DXY and its slight uptrend, a long position in USD/JPY is supported. The DXY's close above its Pivot S1 suggests underlying USD strength."
+  "next_window": "Watch for a break below Pivot S1 at 150.0350 for further downside confirmation.",
+  "summary": "Given the DXY's proximity to its Pivot R1 without breaking higher, combined with USD/JPY closing near its low and below its opening, suggests a potential weakening of USD against JPY in the short term."
 }
