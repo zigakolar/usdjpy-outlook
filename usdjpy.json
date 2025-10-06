@@ -1,9 +1,9 @@
 {
-  "direction": "Short",
-  "stop_loss": 150.349,
-  "take_profit_1": 150.035,
-  "take_profit_2": 149.9,
+  "direction": "Neutral",
+  "stop_loss": 149.6079,
+  "take_profit_1": 150.365,
+  "take_profit_2": 150.5541,
   "high_volatility_report": "None",
-  "next_window": "Watch for a break below Pivot S1 at 150.0350 for further downside confirmation.",
-  "summary": "Given the DXY's proximity to its Pivot R1 without breaking higher, combined with USD/JPY closing near its low and below its opening, suggests a potential weakening of USD against JPY in the short term."
+  "next_window": "",
+  "summary": ""
 }
